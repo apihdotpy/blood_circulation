@@ -6,6 +6,7 @@ import HeartOverlay from "../components/HeartOverlay";
 import FAB from "../components/FAB";
 import DescriptionLeft from "../components/DescriptionLeft";
 import DescriptionRight from "../components/DescriptionRight";
+import DescriptionBottom from "../components/DescriptionBottom";
 
 function HomePage() {
   const [show, setShow] = useState(true);
@@ -37,6 +38,9 @@ function HomePage() {
           <DescriptionRight topFocus={topFocus} bottomFocus={bottomFocus} />
         ) : null}
       </div>
+      {topFocus || bottomFocus ? (
+        <DescriptionBottom topFocus={topFocus} bottomFocus={bottomFocus} />
+      ) : null}
       <FAB onClick={handleClick} show={show} />
     </Container>
   );
