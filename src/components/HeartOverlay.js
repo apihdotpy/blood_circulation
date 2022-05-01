@@ -13,15 +13,15 @@ export default function HeartOverlay({
   setBottomFocus,
 }) {
   return (
-    <div className="bg-transparent absolute h-96 w-80">
+    <div className="bg-transparent absolute z-10 h-96 w-80">
       <BtnTop show={show} topFocus={topFocus} setTopFocus={setTopFocus} />
-      <ContentTop />
+      <ContentTop bottomFocus={bottomFocus} />
       <BtnBottom
         show={show}
         bottomFocus={bottomFocus}
         setBottomFocus={setBottomFocus}
       />
-      <ContentBottom />
+      <ContentBottom topFocus={topFocus} />
     </div>
   );
 }

@@ -7,7 +7,7 @@ export default function DescriptionRight({ topFocus, bottomFocus }) {
     "Impuls elektrik merebak dari bahagian apeks jantung ke seluruh dinding ventrikel. Akibatnya, ventrikel mengecut untuk mengepam darah keluar ke peparu dan badan.";
 
   return (
-    <div className="bg-yellow-100 flex w-96 px-8 pb-4 rounded-lg tracking-wide animate__animated animate__backInRight">
+    <div className="bg-yellow-100 flex w-96 px-8 pb-4 rounded-lg tracking-wide animate__animated animate__bounceInRight">
       <h1 className="text-8xl text-cyan-400">2</h1>
       <span className="mt-4 ml-3">
         {topFocus && descriptionTop} {bottomFocus && descriptionBottom}

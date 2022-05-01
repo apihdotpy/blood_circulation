@@ -9,8 +9,8 @@ import DescriptionRight from "../components/DescriptionRight";
 import DescriptionBottom from "../components/DescriptionBottom";
 
 function HomePage() {
-  const [show, setShow] = useState(true);
-  const [topFocus, setTopFocus] = useState(true);
+  const [show, setShow] = useState(false);
+  const [topFocus, setTopFocus] = useState(false);
   const [bottomFocus, setBottomFocus] = useState(false);
 
   const handleClick = () => {
@@ -33,7 +33,13 @@ function HomePage() {
           bottomFocus={bottomFocus}
           setBottomFocus={setBottomFocus}
         />
-        <Heart />
+        <Heart
+          show={show}
+          topFocus={topFocus}
+          setTopFocus={setTopFocus}
+          bottomFocus={bottomFocus}
+          setBottomFocus={setBottomFocus}
+        />
         {topFocus || bottomFocus ? (
           <DescriptionRight topFocus={topFocus} bottomFocus={bottomFocus} />
         ) : null}
